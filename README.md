@@ -1,21 +1,41 @@
-# Metodología de Auditoría y Evaluación de OSC
+# Estándares técnicos y metodologías — OSC
 
-Este repositorio contiene los estándares técnicos y procedimientos operativos que el **Open Security Collective** utiliza para validar la seguridad de los sistemas investigados.
+Este repositorio centraliza las **metodologías técnicas** y procedimientos operativos que **Open Security Collective** utiliza para auditorías precisas, repetibles y éticas.
 
-## Fases de la Investigación
-Nuestra metodología se divide en 5 etapas críticas para garantizar resultados precisos y éticos:
+## Marcos de referencia
 
-1. **Reconocimiento (Passive Recon):** Recolección de información de fuentes abiertas (OSINT) sin interactuar directamente con los sistemas.
-2. **Enumeración (Active Mapping):** Identificación de servicios, puertos y subdominios autorizados en el alcance (scope).
-3. **Análisis de Vulnerabilidades:** Uso de herramientas automatizadas y análisis manual para identificar vectores de ataque.
-4. **Validación (PoC):** Creación de una Prueba de Concepto no intrusiva para confirmar la existencia del fallo.
-5. **Reporte y Triaje:** Documentación técnica siguiendo el estándar CVSS.
+* **Web:** OWASP Top 10 y WSTG.
+* **Redes:** lineamientos OSSTMM.
+* **Reporte / severidad:** CVSS v3.1/v4.0 y, cuando aplique, [vulnera-calc](https://github.com/opensecuritycollective/vulnera-calc).
 
-## Herramientas Estándar
-Para asegurar la consistencia, nuestros investigadores utilizan herramientas de industria, incluyendo pero no limitado a:
-* **Análisis Web:** Burp Suite, OWASP ZAP, Ffuf, etc.
-* **Escaneo de Red:** Nmap, Masscan, Nuclei, Rustscan, etc.
-* **OSINT:** Maltego, Shodan, Censys, etc.
+## Fases de la investigación
 
----
-*Nota: El uso de estas herramientas fuera de los entornos autorizados por el Manifiesto de OSC está estrictamente prohibido.*
+1. **Reconocimiento (pasivo):** OSINT sin interacción directa con el objetivo.
+2. **Enumeración (activa):** servicios, puertos y activos autorizados en el alcance.
+3. **Análisis de vulnerabilidades:** automatizado + manual.
+4. **Validación (PoC):** prueba mínima no destructiva.
+5. **Reporte y triaje:** documentación técnica y puntuación CVSS.
+
+Detalle por área:
+
+* [Metodología de Reconocimiento (OSINT)](./RECON.md)
+* [Auditoría de Aplicaciones Web](./WEB.md)
+* [Seguridad en Infraestructura y Redes](./INFRA.md)
+
+## Herramientas
+
+Las herramientas OSS avaladas por el colectivo se listan en:
+
+* [awesome-security-tools](https://github.com/opensecuritycollective/awesome-security-tools)
+
+El uso de software “crackeado” está estrictamente prohibido en operaciones oficiales de OSC.
+
+## Gobernanza
+
+* [Manifiesto](https://github.com/opensecuritycollective/governance/blob/main/MANIFIESTO.md)
+* [Política CVD](https://github.com/opensecuritycollective/governance/blob/main/DIVULGACION.md)
+* [Código de conducta](https://github.com/opensecuritycollective/.github/blob/main/CODE_OF_CONDUCT.md)
+
+## Licencia
+
+[Apache License 2.0](./LICENSE)
